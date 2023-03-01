@@ -90,10 +90,15 @@ reset.addEventListener('click', function () {
 
     Array.from(boxtext).forEach(e => {
         e.innerText = '';
-
+        isGameOver = false;
     })
-    giphyEmbed.style.display = 'none';
 
+    giphyEmbed.style.display = 'none';
+    document.getElementById('info').innerText = "Turn of " + turn;
+    Array.from(box).forEach(e => {
+        e.style.backgroundColor = 'white';
+        e.style.color = 'black';
+    })
 
 
 })
